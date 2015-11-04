@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+  background-color: #99baee;
+  color: #fff;
+}
+
+h1 {
+  padding-top: 20px;
+}
+
+input {
+  color: #888;
+}
+
+button {
+  color: #888;
+}
+
+#currentConditions {
+  font-size: 50px;
+}
