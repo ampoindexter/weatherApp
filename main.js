@@ -31,7 +31,6 @@ function getWeather (){
     var currentImage = data.current_observation.icon_url;
     var currentWind = data.current_observation.wind_string;
     var currentTime = data.current_observation.local_time_rfc822
-    console.log(data);
     $('#currentTemp').empty();
     $('#currentWind').empty();
     $('#currentTime').empty();
