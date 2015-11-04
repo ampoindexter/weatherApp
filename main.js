@@ -40,7 +40,7 @@ function getWeather (){
     $('#currentTemp').append('<img src="' + currentImage + '" alt="Current Weather condition image">');
     $('#currentWind').append('Wind is currently: ')
     $('#currentWind').append(currentWind);
-    // $('#currentTime').append('Your current local time is: ')
+    $('#currentTime').append('Your current local time is: ')
     $('#currentTime').append(currentTime);
 
   })
