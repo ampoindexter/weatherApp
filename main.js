@@ -21,9 +21,6 @@ function getWeather (){
   var location = $('#location').val();
   var url = apiUrl + 'conditions/q/' + location + '.json';
   
-  
-  // var $currentConditions = $('<div>').addClass('currentConditions').append('<h3>').text('Your Weather Right Now');
-
 
   $.get(url)
   .done(function(data){
