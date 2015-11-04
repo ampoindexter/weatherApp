@@ -17,5 +17,28 @@ button {
 }
 
 #currentConditions {
-  font-size: 50px;
+  font-size: 45px;
+}
+
+#currentWind {
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#currentTemp {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img {
+  width: 120px;
+  float: none;
+}
+
+#currentTime {
+  float: right;
+  margin-right: auto;
+  margin-left: auto;
 }

@@ -27,12 +27,22 @@ function getWeather (){
 
   $.get(url)
   .done(function(data){
-    var currentTemp = data.current_observation.temperature_string;
+    var currentTemp = (data.current_observation.temperature_string) + ' ' ;
     var currentImage = data.current_observation.icon_url;
+    var currentWind = data.current_observation.wind_string;
+    var currentTime = data.current_observation.local_time_rfc822
     console.log(data);
-    $('#currentConditions').empty();
-    $('#currentConditions').append('<img src="' + currentImage + '" alt="Current Weather condition image">');
-    $('#currentConditions').append(currentTemp);
+    $('#currentTemp').empty();
+    $('#currentWind').empty();
+    $('#currentTime').empty();
+    $('#currentTemp').append('Your current temperature is: ')
+    $('#currentTemp').append(currentTemp);
+    $('#currentTemp').append('<img src="' + currentImage + '" alt="Current Weather condition image">');
+    $('#currentWind').append('Wind is currently: ')
+    $('#currentWind').append(currentWind);
+    // $('#currentTime').append('Your current local time is: ')
+    $('#currentTime').append(currentTime);
+
   })
   .fail(function(error){
     console.error(error);
