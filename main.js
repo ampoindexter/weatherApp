@@ -25,14 +25,16 @@ function getWeather () {
 
   $.get(url)
   .done(function(data){
-    console.log(data);
+    console.log(data.current_observation.display_location.full);
     var currentTemp = (data.current_observation.temperature_string) + ' ' ;
     var currentImage = data.current_observation.icon_url;
     var currentWind = data.current_observation.wind_string;
-    var currentTime = data.current_observation.local_time_rfc822
+    var currentTime = data.current_observation.local_time_rfc822;
+    var currentCity = data.current_observation.display_location.full;
     $('#currentTemp').empty();
     $('#currentWind').empty();
     $('#currentTime').empty();
+    $('#city').text(currentCity);
     $('#currentTemp').append('Your current temperature is: ')
     $('#currentTemp').append(currentTemp);
     $('#currentTemp').append('<img src="' + currentImage + '" alt="Current Weather condition image">');
