@@ -25,8 +25,7 @@ function getWeather () {
 
   $.get(url)
   .done(function(data){
-    console.log(data.current_observation.display_location.full);
-    var currentTemp = (data.current_observation.temperature_string) + ' ' ;
+    var currentTemp = (data.current_observation.temp_f) + ' ' ;
     var currentImage = data.current_observation.icon_url;
     var currentWind = data.current_observation.wind_string;
     var currentTime = data.current_observation.local_time_rfc822;
